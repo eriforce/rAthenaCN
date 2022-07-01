@@ -1,0 +1,112 @@
+izlude.gat,139,135,4	script	传送人员	48,{
+	set @multiple, 100;
+
+	mes "[传送人员]";
+	mes "请选择你要到达的地方:";
+	next;
+	menu	"中央之城 普隆德拉   " + (1*@multiple) + " Zeny",Lmor,
+		"卫星都市 伊斯鲁德   " + (1*@multiple) + " Zeny",Lpro,
+		"魔幻之都 吉分       " + (3*@multiple) + " Zeny",Lpay,
+		"边境之都 梦罗克     " + (1*@multiple) + " Zeny",Lizl,
+		"山岳之都 斐扬       " + (1*@multiple) + " Zeny",Lgef,
+		"港口之都 艾尔贝塔   " + (1*@multiple) + " Zeny",Lald,
+		"运河之都 艾尔帕兰   " + (3*@multiple) + " Zeny",Lorc,
+		"梦幻之岛 克魔岛     " + (3*@multiple) + " Zeny",Lsph,
+		"天空之城 尤诺       " + (1*@multiple) + " Zeny",Lyes,
+		"天水之都 天津       " + (1*@multiple) + " Zeny",Lnoe,
+		"仙境之地 昆仑       " + (3*@multiple) + " Zeny",Lion,
+		"猿人部落 汶巴拉     " + (3*@multiple) + " Zeny",Ln,
+		"度假岛 夏威夷       " + (1*@multiple) + " Zeny",Ljaw,
+		"龙之城 洛阳         " + (3*@multiple) + " Zeny",Llou,
+		"死亡之都 尼芙菲姆   " + (3*@multiple) + " Zeny",Lnif,
+		"幻想之城 姜饼城     " + (1*@multiple) + " Zeny",Xmas,
+		"企业之都 里希塔乐镇 " + (1*@multiple) + " Zeny",L1,
+		"采矿村落 艾音贝赫   " + (3*@multiple) + " Zeny",L2,
+		"钢铁之都 艾音布罗克 " + (1*@multiple) + " Zeny",L3,
+		"泰国 哎哟泰雅       " + (1*@multiple) + " Zeny",L4,
+		"田园都市 毁葛       " + (1*@multiple) + " Zeny",L5,
+		"魔法学校图书馆      " + (5*@multiple) + " Zeny",Lduno,
+		"克雷斯特汉姆古城    " + (3*@multiple) + " Zeny",Larc,
+		"欧克洞              " + (3*@multiple) + " Zeny",Ldunb,
+		"蚂蚁洞              " + (3*@multiple) + " Zeny",Ldunc,
+		"斯芬克斯            " + (3*@multiple) + " Zeny",Ldune,
+		"金字塔              " + (3*@multiple) + " Zeny",Lduni,
+		"沉没船              " + (3*@multiple) + " Zeny",Ldunk,
+		"灯塔岛              " + (3*@multiple) + " Zeny",Ldunn,
+		"吉分尼亚            " + (3*@multiple) + " Zeny",Ldun6,
+		"深渊之湖            " + (3*@multiple) + " Zeny",Ldun5,
+		"优沛擂斯            " + (3*@multiple) + " Zeny",Ldun8,
+		"达纳托斯之塔        " + (3*@multiple) + " Zeny",Ldun11,
+		"樱花城地下庙堂      " + (3*@multiple) + " Zeny",Ldunp,
+		"玩具工厂            " + (3*@multiple) + " Zeny",Ldunm,
+		"机械娃娃工厂        " + (3*@multiple) + " Zeny",Ldun12,
+		"斐扬僵尸洞          " + (3*@multiple) + " Zeny",Ldunh,
+		"海底洞窟            " + (3*@multiple) + " Zeny",Ldunj,
+		"诺可罗德            " + (3*@multiple) + " Zeny",Ldunl,
+		"乌龟岛              " + (3*@multiple) + " Zeny",Ldung,
+		"废气矿场            " + (3*@multiple) + " Zeny",Ldund,
+		"审良宫王陵          " + (3*@multiple) + " Zeny",Ldun9,
+		"古代神殿            " + (3*@multiple) + " Zeny",Ldun10,
+		"生化研究所          " + (3*@multiple) + " Zeny",Ldun7,
+		"斐扬地下公会        " + (3*@multiple) + " Zeny",Ldun1,
+		"艾尔帕兰地下公会    " + (3*@multiple) + " Zeny",Ldun2,
+		"普隆德拉地下公会    " + (3*@multiple) + " Zeny",Ldun3,
+		"吉分地下公会        " + (3*@multiple) + " Zeny",Ldun4,
+		"北之森              " + (5*@multiple) + " Zeny",Lduna;
+
+
+	Lduna:	if(Zeny<5*@multiple) goto NeedZenys;	set Zeny,Zeny-5*@multiple;     warp "prt_fild01.gat",136,368;		close;
+	Ldunb:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "gef_fild10.gat",67,334;		close;
+	Ldunc:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "moc_fild04.gat",210,329;		close;
+	Ldund:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "mjolnir_02.gat",79,361;		close;
+	Ldune:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "moc_fild19.gat",105,99;		close;
+	Ldung:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "tur_dun01.gat",158,36;		close;
+	Ldunh:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "pay_arche.gat",42,139;		close;
+	Lduni:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "moc_ruins.gat",57,153;		close;
+	Ldunj:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "izlu2dun.gat",107,90;		close;
+	Ldunk:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "alb2trea.gat",82,108;		close;
+	Ldunl:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "yuno_fild03.gat",38,140;		close;
+	Ldunm:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "xmas.gat",150,310;		close;
+	Ldunn:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "cmd_fild07.gat",132,128;		close;
+	Lduno:  if(Zeny<5*@multiple) goto NeedZenys;	set Zeny,Zeny-5*@multiple;     warp "yuno_in02.gat",88,160;		close;
+	Ldunp:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "ama_dun01.gat",228,11;		close;
+	Lmor:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "prontera.gat",156,183;	close;
+	Lpro:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "izlude.gat",91,105;	close;
+	Lpay:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "geffen.gat",119,68;	close;
+	Lizl:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "morocc.gat",156,94;	close;
+	Lgef:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "payon.gat",131,55;	close;
+	Lald:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "alberta.gat",117,56;	close;
+	Lorc:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "aldebaran.gat",143,110;	close;
+	Lsph:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "comodo.gat",188,164;	close;
+	Larc:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "glast_01.gat",200,200;	close;
+	Lyes:   if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "yuno.gat",157,41;		close;
+	Lnoe:   if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "amatsu.gat",197,78;	close;
+	Lion:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "gonryun.gat",161,18;	close;
+	Ljaw:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "jawaii.gat",213,162;	close;
+	Llou:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "louyang.gat",213,103;	close;
+	Lnif:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "niflheim.gat",202,177;	close;
+	Ln:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "umbala.gat",126,132;	close;
+	Xmas:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "xmas.gat",138,106;	close;
+	L1:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "lighthalzen.gat",214,322;	close;
+	L2:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "einbech.gat",138,248;	close;
+	L3:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "einbroch.gat",149,38;	close;
+	L4:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "ayothaya.gat",217,187;	close;
+	L5:	if(Zeny<1*@multiple) goto NeedZenys;	set Zeny,Zeny-1*@multiple;     warp "hugel.gat",86,119;	close;
+	Ldun1:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "gld_dun01.gat",0,0;		close;
+	Ldun2:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "gld_dun02.gat",0,0;		close;
+	Ldun3:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "gld_dun03.gat",0,0;		close;
+	Ldun4:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "gld_dun04.gat",0,0;		close;
+	Ldun5:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "hu_fild05.gat",189,203;		close;
+	Ldun6:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "gefenia01.gat",0,0;		close;
+	Ldun7:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "lhz_dun01.gat",150,288;		close;
+	Ldun8:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "juperos_01.gat",50,250;		close;
+	Ldun9:  if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "louyang.gat",38,286;		close;
+	Ldun10:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "ayo_fild02.gat",20,138;		close;
+	Ldun11:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "tha_scene01.gat",139,201;		close;
+	Ldun12:	if(Zeny<3*@multiple) goto NeedZenys;	set Zeny,Zeny-3*@multiple;     warp "kh_dun01.gat",0,0;		close;
+
+NeedZenys:
+	mes "[传送人员]";
+	mes "对不起，你没有足够金钱！";
+	close;
+}
