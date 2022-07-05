@@ -2,6 +2,28 @@ izlude.gat,139,135,4	script	传送人员	48,{
 	set @multiple, 100;
 
 	mes "[传送人员]";
+	mes "我是地点传送人员，我们无处不在的为你服务让你在各大城市间穿梭。";
+	next;
+	menu "传送到某地",city,"传送到某人",LisWarp;
+LisWarp:
+	if(zeny>=1000) goto Lusewarp;
+	mes "[传送人员]";
+	mes "对不起，我想你身上没带够钱吧。";
+	mes "请带够^0000FF1000^000000Zeny再来找我吧";
+	close;
+Lusewarp:
+	mes "[传送人员]";
+	mes "输入传送到的人物名字。";
+	next;
+	input .@inputstr$;
+	jumpto .@inputstr$;
+	set Zeny,Zeny-1000;
+	close;
+Lquit:
+	close;
+
+city:
+	mes "[传送人员]";
 	mes "请选择你要到达的地方:";
 	next;
 	menu	
