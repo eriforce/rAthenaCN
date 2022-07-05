@@ -5562,6 +5562,31 @@ BUILDIN_FUNC(rand)
 	return SCRIPT_CMD_SUCCESS;
 }
 
+BUILDIN_FUNC(jumpto)
+{
+	int ret;
+	const char* str;
+	struct map_session_data* sd;
+	struct map_session_data* target_sd;
+
+	if(!script_charid2sd(5, sd))
+		return SCRIPT_CMD_SUCCESS;
+
+	str = script_getstr(st,2);
+
+	if((target_sd=map_nick2sd(str,true)) == NULL)
+		return SCRIPT_CMD_SUCCESS;
+
+	ret = pc_setpos(sd, target_sd->mapindex, target_sd->bl.x, target_sd->bl.y, CLR_TELEPORT);
+
+	if( ret ) {
+		ShowError("buildin_jump: moving player '%s' to \"%s\" failed.\n", sd->status.name, target_sd->status.name);
+		return SCRIPT_CMD_FAILURE;
+	}
+
+	return SCRIPT_CMD_SUCCESS;
+}
+
 /*==========================================
  * Warp sd to str,x,y or Random or SavePoint/Save
  *------------------------------------------*/
@@ -26148,6 +26173,7 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(jobchange,"i??"),
 	BUILDIN_DEF(jobname,"i"),
 	BUILDIN_DEF(input,"r??"),
+	BUILDIN_DEF(jumpto,"s*"),
 	BUILDIN_DEF(warp,"sii?"),
 	BUILDIN_DEF2(warp, "warpchar", "sii?"),
 	BUILDIN_DEF(areawarp,"siiiisii??"),
