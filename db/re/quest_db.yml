@@ -3105,7 +3105,7 @@ Body:
     Title: Special task of an assassin guild  3
   - Id: 7104
     Title: Special task of an assassin guild  4
-    TimeLimit: +15mn
+    TimeLimit: +50mn
   - Id: 7105
     Title: Special task of an assassin guild  4
     TimeLimit: +10mn
@@ -3113,7 +3113,7 @@ Body:
     Title: Special task of an assassin guild  5
   - Id: 7107
     Title: Special task of an assassin guild  6
-    TimeLimit: +30mn
+    TimeLimit: +3h
   - Id: 7108
     Title: Special task of an assassin guild  7
   - Id: 7109
