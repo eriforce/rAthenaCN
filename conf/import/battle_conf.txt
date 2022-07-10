@@ -9,4 +9,4 @@
 // 16: 显示魔物的体型 [rAthenaCN 选项]
 // 32: 显示魔物的种族 [rAthenaCN 选项]
 // 64: 显示魔物的属性 [rAthenaCN 选项]
-show_mob_info: 126
+show_mob_info: 104
